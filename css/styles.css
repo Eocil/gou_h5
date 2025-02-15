@@ -1,0 +1,92 @@
+/* 设置 body、html 基本样式 */
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    font-family: sans-serif;
+}
+
+h1 {
+    background-image: url('../static/head.jpg');
+    background-size: cover; /* 拉伸图片以覆盖整个背景区域 */
+    background-position: center; /* 居中对齐背景图片 */
+    color: white; /* 根据需要调整文字颜色 */
+    padding: 20px; /* 根据需要调整内边距 */
+    text-align: center; /* 根据需要调整文本对齐方式 */
+    height: 200px; /* 根据需要调整高度 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+}
+
+/* 横屏页面容器，每页尺寸调整为 1008pt 宽 x 640pt 高 */
+.page {
+    width: 1008pt;
+    height: 640pt;
+    margin: 20px auto; /* 顶部与底部间距 */
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* 横图占位，全屏背景，预留横图显示 */
+.page .bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.page:first-of-type .bg-image {
+    background-image: url('../static/1.jpg');
+}
+
+.page:nth-of-type(2) .bg-image {
+    background-image: url('../static/2.jpg');
+}
+
+.page:nth-of-type(3) .bg-image {
+    background-image: url('../static/3.jpg');
+}
+
+.page:nth-of-type(4) .bg-image {
+    background-image: url('../static/4.jpg');
+}
+
+.page:nth-of-type(5) .bg-image {
+    background-image: url('../static/5.jpg');
+}
+
+.page:nth-of-type(6) .bg-image {
+    background-image: url('../static/6.jpeg');
+}
+
+.page:nth-of-type(7) .bg-image {
+    background-image: url('../static/7.jpg');
+}
+
+.page:nth-of-type(8) .bg-image {
+    background-image: url('../static/8.jpg');
+}
+
+
+/* 内容样式，设置半透明背景确保文本清晰 */
+.page section {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* header 和 footer 样式 */
+header, footer {
+    text-align: center;
+    padding: 10px 0;
+}
+
